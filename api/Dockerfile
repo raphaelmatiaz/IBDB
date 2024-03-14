@@ -9,7 +9,6 @@ WORKDIR /api
 # Copy source code
 COPY ./src/ ./src/
 COPY ./pyproject.toml .
-COPY ./README.md .
 
 # Poetry install
 RUN poetry install

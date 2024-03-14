@@ -9,7 +9,11 @@ web:  ## Run web container on port 8000
 .PHONY: api
 api:  ## Run api container on port 8001
 	docker compose up --build api
+	
+.PHONY: mysql
+mysql: ## Run mysql container on port 8002
+	docker compose up --build mysql
 
 .PHONY: up
-up:  ## Run web container on port 8000 and api container on port 8001
+up:  ## Run web container on port 8000 and api container on port 8001 and mysql container on port 8002
 	docker compose up --build
